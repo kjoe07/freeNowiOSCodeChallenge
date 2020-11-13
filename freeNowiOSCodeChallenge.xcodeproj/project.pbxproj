@@ -21,6 +21,9 @@
 		11F749D4255EC37700E4CDE5 /* PoiListResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F749D3255EC37700E4CDE5 /* PoiListResponse.swift */; };
 		11F749E7255EDAE400E4CDE5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F749E6255EDAE400E4CDE5 /* MapViewController.swift */; };
 		11F749F9255EDB6F00E4CDE5 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F749F7255EDB6F00E4CDE5 /* Map.storyboard */; };
+		11F749FE255EE15A00E4CDE5 /* PoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F749FD255EE15A00E4CDE5 /* PoiTableViewCell.swift */; };
+		11F74A03255EE22C00E4CDE5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74A02255EE22C00E4CDE5 /* RoundedButton.swift */; };
+		11F74A08255EE38100E4CDE5 /* CarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74A07255EE38100E4CDE5 /* CarImageView.swift */; };
 		3B07677D0CE66966A7F6F297 /* Pods_freeNowiOSCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1AAAD3213BF113CD9DE112 /* Pods_freeNowiOSCodeChallengeTests.framework */; };
 		51E155BDEDB45D72AB482DBB /* Pods_freeNowiOSCodeChallenge_freeNowiOSCodeChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0810B9F902D94123C7B4FBA5 /* Pods_freeNowiOSCodeChallenge_freeNowiOSCodeChallengeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -63,6 +66,9 @@
 		11F749D3255EC37700E4CDE5 /* PoiListResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListResponse.swift; sourceTree = "<group>"; };
 		11F749E6255EDAE400E4CDE5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		11F749F8255EDB6F00E4CDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Map.storyboard; sourceTree = "<group>"; };
+		11F749FD255EE15A00E4CDE5 /* PoiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiTableViewCell.swift; sourceTree = "<group>"; };
+		11F74A02255EE22C00E4CDE5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		11F74A07255EE38100E4CDE5 /* CarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarImageView.swift; sourceTree = "<group>"; };
 		411ED13789518C5803569AA2 /* Pods-freeNowiOSCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeNowiOSCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-freeNowiOSCodeChallenge/Pods-freeNowiOSCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		9D1AAAD3213BF113CD9DE112 /* Pods_freeNowiOSCodeChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeNowiOSCodeChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5B51A63F52B51B507983A7 /* Pods-freeNowiOSCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeNowiOSCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-freeNowiOSCodeChallenge/Pods-freeNowiOSCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -172,6 +178,9 @@
 				11F74993255EBDFC00E4CDE5 /* ViewController.swift */,
 				11F74995255EBDFC00E4CDE5 /* Main.storyboard */,
 				11F749E6255EDAE400E4CDE5 /* MapViewController.swift */,
+				11F749FD255EE15A00E4CDE5 /* PoiTableViewCell.swift */,
+				11F74A02255EE22C00E4CDE5 /* RoundedButton.swift */,
+				11F74A07255EE38100E4CDE5 /* CarImageView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,7 +450,10 @@
 				11F74994255EBDFC00E4CDE5 /* ViewController.swift in Sources */,
 				11F749CF255EC34200E4CDE5 /* PoiList.swift in Sources */,
 				11F74990255EBDFC00E4CDE5 /* AppDelegate.swift in Sources */,
+				11F74A08255EE38100E4CDE5 /* CarImageView.swift in Sources */,
 				11F74992255EBDFC00E4CDE5 /* SceneDelegate.swift in Sources */,
+				11F74A03255EE22C00E4CDE5 /* RoundedButton.swift in Sources */,
+				11F749FE255EE15A00E4CDE5 /* PoiTableViewCell.swift in Sources */,
 				11F749C7255EC2F100E4CDE5 /* Cordinate.swift in Sources */,
 				11F749D4255EC37700E4CDE5 /* PoiListResponse.swift in Sources */,
 				11F749E7255EDAE400E4CDE5 /* MapViewController.swift in Sources */,

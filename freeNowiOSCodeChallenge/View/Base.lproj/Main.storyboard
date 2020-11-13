@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -22,7 +21,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="774"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="5AG-sX-i6O" customClass="TripsTableViewCell" customModule="freeNowiOSCodeChallenge" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="5AG-sX-i6O" customClass="PoiTableViewCell" customModule="freeNowiOSCodeChallenge" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5AG-sX-i6O" id="1SB-Cw-tjm">
@@ -35,9 +34,8 @@
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2WI-w1-fUp">
                                                             <rect key="frame" x="0.0" y="0.0" width="56" height="99"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sedan" translatesAutoresizingMaskIntoConstraints="NO" id="ufD-Xy-5vc" customClass="CarImageView" customModule="freeNowiOSCodeChallenge" customModuleProvider="target">
+                                                                <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="sedan" translatesAutoresizingMaskIntoConstraints="NO" id="ufD-Xy-5vc" customClass="CarImageView" customModule="freeNowiOSCodeChallenge" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="5" width="56" height="56"/>
-                                                                    <color key="tintColor" name="orangeYellow"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="56" id="BEg-WI-TZF"/>
                                                                         <constraint firstAttribute="width" constant="56" id="GuB-OH-zPn"/>
@@ -49,11 +47,14 @@
                                                                         <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                                             <real key="value" value="2"/>
                                                                         </userDefinedRuntimeAttribute>
+                                                                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                            <color key="value" systemColor="systemGreenColor"/>
+                                                                        </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1Ax-XD-rWp" customClass="RoundedButton" customModule="freeNowiOSCodeChallenge" customModuleProvider="target">
                                                                     <rect key="frame" x="0.0" y="71" width="56" height="20"/>
-                                                                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                                                    <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="d0z-1P-ZMf"/>
                                                                     </constraints>
@@ -115,7 +116,7 @@
                                                                             <color key="tintColor" systemColor="labelColor"/>
                                                                             <imageReference key="image" image="globe" catalog="system" symbolScale="large"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="000 km" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7w-ib-GQk">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="0.000,0.000" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m7w-ib-GQk">
                                                                             <rect key="frame" x="42" y="0.0" width="293" height="27"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                             <nil key="highlightedColor"/>
@@ -130,7 +131,7 @@
                                                                             <color key="tintColor" systemColor="labelColor"/>
                                                                             <imageReference key="image" image="location.fill" catalog="system" symbolScale="large"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lorem Ipsum, Ipsum Lorem calte nd jd  jhdj d  jjj rsrgdhncp sijs soosjd s siso xxxv mmmn mmm" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLJ-Jf-y3D">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MLJ-Jf-y3D">
                                                                             <rect key="frame" x="41.5" y="0.0" width="293.5" height="27"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                                             <nil key="highlightedColor"/>
@@ -153,9 +154,13 @@
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
                                             <outlet property="distance" destination="m7w-ib-GQk" id="G2Z-u2-S3j"/>
+                                            <outlet property="heading" destination="MLJ-Jf-y3D" id="SAK-hV-RMU"/>
+                                            <outlet property="location" destination="m7w-ib-GQk" id="JNP-2W-8I2"/>
                                             <outlet property="min" destination="1Ax-XD-rWp" id="8pP-6m-z1f"/>
+                                            <outlet property="status" destination="1Ax-XD-rWp" id="1Km-to-ilv"/>
+                                            <outlet property="vehicelType" destination="JQK-G8-8sg" id="emJ-FG-y0O"/>
                                             <outlet property="vehicleAdress" destination="MLJ-Jf-y3D" id="keS-1f-Dgq"/>
-                                            <outlet property="vehicleImage" destination="ufD-Xy-5vc" id="ZbE-t5-gPd"/>
+                                            <outlet property="vehicleImage" destination="ufD-Xy-5vc" id="L5L-xl-Run"/>
                                             <outlet property="vehicleName" destination="JQK-G8-8sg" id="kFb-9u-u7n"/>
                                         </connections>
                                     </tableViewCell>
@@ -218,23 +223,28 @@
             <point key="canvasLocation" x="2245" y="106"/>
         </scene>
     </scenes>
+    <designables>
+        <designable name="1Ax-XD-rWp">
+            <size key="intrinsicContentSize" width="39" height="26"/>
+        </designable>
+        <designable name="ufD-Xy-5vc">
+            <size key="intrinsicContentSize" width="56" height="56"/>
+        </designable>
+    </designables>
     <resources>
         <image name="car" catalog="system" width="128" height="93"/>
         <image name="globe" catalog="system" width="128" height="121"/>
         <image name="location.fill" catalog="system" width="128" height="121"/>
         <image name="map" catalog="system" width="128" height="110"/>
         <image name="sedan" width="56" height="56"/>
-        <namedColor name="orangeYellow">
-            <color red="0.32899999618530273" green="0.32400000095367432" blue="0.4779999852180481" alpha="0.33000001311302185" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="opaqueSeparatorColor">
-            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
