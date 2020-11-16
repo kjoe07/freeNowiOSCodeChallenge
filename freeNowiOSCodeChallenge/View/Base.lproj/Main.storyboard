@@ -12,7 +12,7 @@
         <!--Vehicle List-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="freeNowiOSCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="PoiListViewController" id="BYZ-38-t0r" customClass="PoiListViewController" customModule="freeNowiOSCodeChallenge" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -58,7 +58,7 @@
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="20" id="d0z-1P-ZMf"/>
                                                                     </constraints>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="12"/>
                                                                     <state key="normal" title="ACTIVE">
                                                                         <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small" weight="thin"/>
@@ -97,9 +97,12 @@
                                                                         <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleAspectFit" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uh2-hz-gYc">
                                                                             <rect key="frame" x="0.0" y="1.5" width="24" height="24.5"/>
                                                                             <color key="tintColor" systemColor="labelColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="24" id="TZj-RP-4HE"/>
+                                                                            </constraints>
                                                                             <imageReference key="image" image="car" catalog="system" symbolScale="medium"/>
                                                                         </imageView>
-                                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalCompressionResistancePriority="748" insetsLayoutMarginsFromSafeArea="NO" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQK-G8-8sg">
+                                                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" horizontalCompressionResistancePriority="748" insetsLayoutMarginsFromSafeArea="NO" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JQK-G8-8sg">
                                                                             <rect key="frame" x="44" y="0.0" width="291" height="27"/>
                                                                             <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                                                             <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -153,18 +156,18 @@
                                         </tableViewCellContentView>
                                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <connections>
-                                            <outlet property="distance" destination="m7w-ib-GQk" id="G2Z-u2-S3j"/>
                                             <outlet property="heading" destination="MLJ-Jf-y3D" id="SAK-hV-RMU"/>
                                             <outlet property="location" destination="m7w-ib-GQk" id="JNP-2W-8I2"/>
-                                            <outlet property="min" destination="1Ax-XD-rWp" id="8pP-6m-z1f"/>
                                             <outlet property="status" destination="1Ax-XD-rWp" id="1Km-to-ilv"/>
-                                            <outlet property="vehicelType" destination="JQK-G8-8sg" id="emJ-FG-y0O"/>
-                                            <outlet property="vehicleAdress" destination="MLJ-Jf-y3D" id="keS-1f-Dgq"/>
                                             <outlet property="vehicleImage" destination="ufD-Xy-5vc" id="L5L-xl-Run"/>
-                                            <outlet property="vehicleName" destination="JQK-G8-8sg" id="kFb-9u-u7n"/>
+                                            <outlet property="vehicleType" destination="JQK-G8-8sg" id="WLJ-WF-Ulc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bSf-bX-Jjk"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Jbx-oE-Y1A"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -186,7 +189,8 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="tableView" destination="zYX-I9-Q5Z" id="Abe-BE-x9d"/>
+                        <outlet property="mapButton" destination="ROR-ld-ZvD" id="qVH-kS-KK3"/>
+                        <outlet property="tableView" destination="zYX-I9-Q5Z" id="TaY-WW-KBO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -225,7 +229,7 @@
     </scenes>
     <designables>
         <designable name="1Ax-XD-rWp">
-            <size key="intrinsicContentSize" width="39" height="26"/>
+            <size key="intrinsicContentSize" width="47" height="27"/>
         </designable>
         <designable name="ufD-Xy-5vc">
             <size key="intrinsicContentSize" width="56" height="56"/>

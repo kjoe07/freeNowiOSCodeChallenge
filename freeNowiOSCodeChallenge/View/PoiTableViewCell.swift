@@ -22,5 +22,14 @@ class PoiTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    func setup(vm: PoiTableViewCellViewModel){
+        vehicleType.text = vm.vehicleType
+        location.text = vm.vehilceLocation
+        heading.text = vm.heading
+        status.setTitle(vm.status, for: .normal)
+        status.backgroundColor = UIColor(named: vm.statusColor) ?? .red
+        vehicleImage.layer.borderColor = (UIColor(named: vm.statusColor) ?? .red).cgColor
+    }
 
 }

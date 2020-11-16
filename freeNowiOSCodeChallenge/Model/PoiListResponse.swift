@@ -7,7 +7,7 @@
 
 import Foundation
 struct PoiListResponse : Decodable {
-    let poiList : [PoiList]?
+    let poiList : [Poi]?
 
     enum CodingKeys: String, CodingKey {
         case poiList = "poiList"
@@ -15,7 +15,7 @@ struct PoiListResponse : Decodable {
 
     init(from decoder: Decoder) throws {
         let values = try decoder.container(keyedBy: CodingKeys.self)
-        poiList = try values.decodeIfPresent([PoiList].self, forKey: .poiList)
+        poiList = try values.decodeIfPresent([Poi].self, forKey: .poiList)
     }
 
 }

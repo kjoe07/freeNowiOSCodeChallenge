@@ -6,7 +6,7 @@
 //
 
 import Foundation
-struct PoiList : Decodable {
+struct Poi : Decodable {
     let id : Int?
     let coordinate : Coordinate?
     let state : String?

@@ -8,13 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		0799A6E222A31D61F370EA9A /* Pods_freeNowiOSCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF42B426CA7588BFE842AB8E /* Pods_freeNowiOSCodeChallenge.framework */; };
+		119C88A32562E2940088334B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88A22562E2940088334B /* DIContainer.swift */; };
+		119C88A8256312990088334B /* PoilistViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88A7256312990088334B /* PoilistViewModelTest.swift */; };
+		119C88B125631AD00088334B /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88B025631AD00088334B /* DoubleExtensions.swift */; };
+		119C88B625631FE20088334B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88B525631FE20088334B /* UITableViewExtension.swift */; };
 		11F74990255EBDFC00E4CDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F7498F255EBDFC00E4CDE5 /* AppDelegate.swift */; };
 		11F74992255EBDFC00E4CDE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74991255EBDFC00E4CDE5 /* SceneDelegate.swift */; };
-		11F74994255EBDFC00E4CDE5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74993255EBDFC00E4CDE5 /* ViewController.swift */; };
 		11F74997255EBDFC00E4CDE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F74995255EBDFC00E4CDE5 /* Main.storyboard */; };
 		11F74999255EBE0D00E4CDE5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F74998255EBE0D00E4CDE5 /* Assets.xcassets */; };
 		11F7499C255EBE0D00E4CDE5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F7499A255EBE0D00E4CDE5 /* LaunchScreen.storyboard */; };
-		11F749A7255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F749A6255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeTests.swift */; };
 		11F749B2255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F749B1255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeUITests.swift */; };
 		11F749C7255EC2F100E4CDE5 /* Cordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F749C6255EC2F100E4CDE5 /* Cordinate.swift */; };
 		11F749CF255EC34200E4CDE5 /* PoiList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F749CE255EC34200E4CDE5 /* PoiList.swift */; };
@@ -24,6 +26,17 @@
 		11F749FE255EE15A00E4CDE5 /* PoiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F749FD255EE15A00E4CDE5 /* PoiTableViewCell.swift */; };
 		11F74A03255EE22C00E4CDE5 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74A02255EE22C00E4CDE5 /* RoundedButton.swift */; };
 		11F74A08255EE38100E4CDE5 /* CarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74A07255EE38100E4CDE5 /* CarImageView.swift */; };
+		11F74A13255F09C100E4CDE5 /* PoiListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74A12255F09C100E4CDE5 /* PoiListViewController.swift */; };
+		11F74A19255F09FC00E4CDE5 /* PoiListViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74A18255F09FC00E4CDE5 /* PoiListViewControllerTest.swift */; };
+		11F74A2725601BCB00E4CDE5 /* testHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74A2625601BCB00E4CDE5 /* testHelper.swift */; };
+		11F74AFA25620BF400E4CDE5 /* PoiListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74AF925620BF300E4CDE5 /* PoiListViewModel.swift */; };
+		11F74B0225620F8500E4CDE5 /* PoiTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74B0125620F8500E4CDE5 /* PoiTableViewCellViewModel.swift */; };
+		11F74B072562AE3500E4CDE5 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 11F74B062562AE3500E4CDE5 /* Colors.xcassets */; };
+		11F74B0D2562BBAD00E4CDE5 /* PoiListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74B0C2562BBAD00E4CDE5 /* PoiListService.swift */; };
+		11F74B152562BD0500E4CDE5 /* NetWorkLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74B142562BD0500E4CDE5 /* NetWorkLoader.swift */; };
+		11F74B1C2562BF2800E4CDE5 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74B1B2562BF2800E4CDE5 /* Endpoint.swift */; };
+		11F74B212562D88300E4CDE5 /* TestPoiListservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74B202562D88300E4CDE5 /* TestPoiListservice.swift */; };
+		11F74B262562D8A200E4CDE5 /* MockPolistService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74B252562D8A200E4CDE5 /* MockPolistService.swift */; };
 		3B07677D0CE66966A7F6F297 /* Pods_freeNowiOSCodeChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1AAAD3213BF113CD9DE112 /* Pods_freeNowiOSCodeChallengeTests.framework */; };
 		51E155BDEDB45D72AB482DBB /* Pods_freeNowiOSCodeChallenge_freeNowiOSCodeChallengeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0810B9F902D94123C7B4FBA5 /* Pods_freeNowiOSCodeChallenge_freeNowiOSCodeChallengeUITests.framework */; };
 /* End PBXBuildFile section */
@@ -47,16 +60,18 @@
 
 /* Begin PBXFileReference section */
 		0810B9F902D94123C7B4FBA5 /* Pods_freeNowiOSCodeChallenge_freeNowiOSCodeChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeNowiOSCodeChallenge_freeNowiOSCodeChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		119C88A22562E2940088334B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
+		119C88A7256312990088334B /* PoilistViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoilistViewModelTest.swift; sourceTree = "<group>"; };
+		119C88B025631AD00088334B /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
+		119C88B525631FE20088334B /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		11F7498C255EBDFC00E4CDE5 /* freeNowiOSCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freeNowiOSCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F7498F255EBDFC00E4CDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F74991255EBDFC00E4CDE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		11F74993255EBDFC00E4CDE5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		11F74996255EBDFC00E4CDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		11F74998255EBE0D00E4CDE5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		11F7499B255EBE0D00E4CDE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		11F7499D255EBE0D00E4CDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F749A2255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = freeNowiOSCodeChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		11F749A6255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freeNowiOSCodeChallengeTests.swift; sourceTree = "<group>"; };
 		11F749A8255EBE0E00E4CDE5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		11F749AD255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = freeNowiOSCodeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F749B1255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = freeNowiOSCodeChallengeUITests.swift; sourceTree = "<group>"; };
@@ -69,6 +84,18 @@
 		11F749FD255EE15A00E4CDE5 /* PoiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiTableViewCell.swift; sourceTree = "<group>"; };
 		11F74A02255EE22C00E4CDE5 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		11F74A07255EE38100E4CDE5 /* CarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarImageView.swift; sourceTree = "<group>"; };
+		11F74A12255F09C100E4CDE5 /* PoiListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListViewController.swift; sourceTree = "<group>"; };
+		11F74A17255F09FC00E4CDE5 /* freeNowiOSCodeChallengeTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "freeNowiOSCodeChallengeTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		11F74A18255F09FC00E4CDE5 /* PoiListViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListViewControllerTest.swift; sourceTree = "<group>"; };
+		11F74A2625601BCB00E4CDE5 /* testHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testHelper.swift; sourceTree = "<group>"; };
+		11F74AF925620BF300E4CDE5 /* PoiListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListViewModel.swift; sourceTree = "<group>"; };
+		11F74B0125620F8500E4CDE5 /* PoiTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiTableViewCellViewModel.swift; sourceTree = "<group>"; };
+		11F74B062562AE3500E4CDE5 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		11F74B0C2562BBAD00E4CDE5 /* PoiListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiListService.swift; sourceTree = "<group>"; };
+		11F74B142562BD0500E4CDE5 /* NetWorkLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkLoader.swift; sourceTree = "<group>"; };
+		11F74B1B2562BF2800E4CDE5 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		11F74B202562D88300E4CDE5 /* TestPoiListservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestPoiListservice.swift; sourceTree = "<group>"; };
+		11F74B252562D8A200E4CDE5 /* MockPolistService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPolistService.swift; sourceTree = "<group>"; };
 		411ED13789518C5803569AA2 /* Pods-freeNowiOSCodeChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeNowiOSCodeChallenge.debug.xcconfig"; path = "Target Support Files/Pods-freeNowiOSCodeChallenge/Pods-freeNowiOSCodeChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		9D1AAAD3213BF113CD9DE112 /* Pods_freeNowiOSCodeChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeNowiOSCodeChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB5B51A63F52B51B507983A7 /* Pods-freeNowiOSCodeChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-freeNowiOSCodeChallenge.release.xcconfig"; path = "Target Support Files/Pods-freeNowiOSCodeChallenge/Pods-freeNowiOSCodeChallenge.release.xcconfig"; sourceTree = "<group>"; };
@@ -107,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		119C88AF25631AA80088334B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				119C88B025631AD00088334B /* DoubleExtensions.swift */,
+				119C88B525631FE20088334B /* UITableViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		11F74983255EBDFC00E4CDE5 = {
 			isa = PBXGroup;
 			children = (
@@ -132,6 +168,9 @@
 		11F7498E255EBDFC00E4CDE5 /* freeNowiOSCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				119C88AF25631AA80088334B /* Extensions */,
+				11F74B0B2562B08200E4CDE5 /* Network */,
+				11F74AF825620BBA00E4CDE5 /* ViewModel */,
 				11F749D8255ECDB900E4CDE5 /* View */,
 				11F749C5255EC2C000E4CDE5 /* Model */,
 				11F7498F255EBDFC00E4CDE5 /* AppDelegate.swift */,
@@ -139,6 +178,8 @@
 				11F74998255EBE0D00E4CDE5 /* Assets.xcassets */,
 				11F7499A255EBE0D00E4CDE5 /* LaunchScreen.storyboard */,
 				11F7499D255EBE0D00E4CDE5 /* Info.plist */,
+				11F74B062562AE3500E4CDE5 /* Colors.xcassets */,
+				119C88A22562E2940088334B /* DIContainer.swift */,
 			);
 			path = freeNowiOSCodeChallenge;
 			sourceTree = "<group>";
@@ -146,8 +187,13 @@
 		11F749A5255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeTests */ = {
 			isa = PBXGroup;
 			children = (
-				11F749A6255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeTests.swift */,
 				11F749A8255EBE0E00E4CDE5 /* Info.plist */,
+				11F74A18255F09FC00E4CDE5 /* PoiListViewControllerTest.swift */,
+				11F74A17255F09FC00E4CDE5 /* freeNowiOSCodeChallengeTests-Bridging-Header.h */,
+				11F74A2625601BCB00E4CDE5 /* testHelper.swift */,
+				11F74B202562D88300E4CDE5 /* TestPoiListservice.swift */,
+				11F74B252562D8A200E4CDE5 /* MockPolistService.swift */,
+				119C88A7256312990088334B /* PoilistViewModelTest.swift */,
 			);
 			path = freeNowiOSCodeChallengeTests;
 			sourceTree = "<group>";
@@ -175,14 +221,33 @@
 			isa = PBXGroup;
 			children = (
 				11F749F7255EDB6F00E4CDE5 /* Map.storyboard */,
-				11F74993255EBDFC00E4CDE5 /* ViewController.swift */,
 				11F74995255EBDFC00E4CDE5 /* Main.storyboard */,
 				11F749E6255EDAE400E4CDE5 /* MapViewController.swift */,
 				11F749FD255EE15A00E4CDE5 /* PoiTableViewCell.swift */,
 				11F74A02255EE22C00E4CDE5 /* RoundedButton.swift */,
 				11F74A07255EE38100E4CDE5 /* CarImageView.swift */,
+				11F74A12255F09C100E4CDE5 /* PoiListViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		11F74AF825620BBA00E4CDE5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				11F74AF925620BF300E4CDE5 /* PoiListViewModel.swift */,
+				11F74B0125620F8500E4CDE5 /* PoiTableViewCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		11F74B0B2562B08200E4CDE5 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				11F74B0C2562BBAD00E4CDE5 /* PoiListService.swift */,
+				11F74B142562BD0500E4CDE5 /* NetWorkLoader.swift */,
+				11F74B1B2562BF2800E4CDE5 /* Endpoint.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		46235D8FDF464426D4C0EC3A /* Frameworks */ = {
@@ -283,6 +348,7 @@
 					};
 					11F749A1255EBE0E00E4CDE5 = {
 						CreatedOnToolsVersion = 12.1;
+						LastSwiftMigration = 1210;
 						TestTargetID = 11F7498B255EBDFC00E4CDE5;
 					};
 					11F749AC255EBE0E00E4CDE5 = {
@@ -316,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F74B072562AE3500E4CDE5 /* Colors.xcassets in Resources */,
 				11F7499C255EBE0D00E4CDE5 /* LaunchScreen.storyboard in Resources */,
 				11F74999255EBE0D00E4CDE5 /* Assets.xcassets in Resources */,
 				11F74997255EBDFC00E4CDE5 /* Main.storyboard in Resources */,
@@ -447,14 +514,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F74994255EBDFC00E4CDE5 /* ViewController.swift in Sources */,
 				11F749CF255EC34200E4CDE5 /* PoiList.swift in Sources */,
+				11F74B0225620F8500E4CDE5 /* PoiTableViewCellViewModel.swift in Sources */,
 				11F74990255EBDFC00E4CDE5 /* AppDelegate.swift in Sources */,
 				11F74A08255EE38100E4CDE5 /* CarImageView.swift in Sources */,
+				11F74B1C2562BF2800E4CDE5 /* Endpoint.swift in Sources */,
 				11F74992255EBDFC00E4CDE5 /* SceneDelegate.swift in Sources */,
+				11F74AFA25620BF400E4CDE5 /* PoiListViewModel.swift in Sources */,
 				11F74A03255EE22C00E4CDE5 /* RoundedButton.swift in Sources */,
+				11F74B152562BD0500E4CDE5 /* NetWorkLoader.swift in Sources */,
 				11F749FE255EE15A00E4CDE5 /* PoiTableViewCell.swift in Sources */,
 				11F749C7255EC2F100E4CDE5 /* Cordinate.swift in Sources */,
+				11F74B0D2562BBAD00E4CDE5 /* PoiListService.swift in Sources */,
+				119C88B125631AD00088334B /* DoubleExtensions.swift in Sources */,
+				119C88A32562E2940088334B /* DIContainer.swift in Sources */,
+				11F74A13255F09C100E4CDE5 /* PoiListViewController.swift in Sources */,
+				119C88B625631FE20088334B /* UITableViewExtension.swift in Sources */,
 				11F749D4255EC37700E4CDE5 /* PoiListResponse.swift in Sources */,
 				11F749E7255EDAE400E4CDE5 /* MapViewController.swift in Sources */,
 			);
@@ -464,7 +539,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				11F749A7255EBE0E00E4CDE5 /* freeNowiOSCodeChallengeTests.swift in Sources */,
+				11F74B262562D8A200E4CDE5 /* MockPolistService.swift in Sources */,
+				11F74A19255F09FC00E4CDE5 /* PoiListViewControllerTest.swift in Sources */,
+				11F74B212562D88300E4CDE5 /* TestPoiListservice.swift in Sources */,
+				11F74A2725601BCB00E4CDE5 /* testHelper.swift in Sources */,
+				119C88A8256312990088334B /* PoilistViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -681,6 +760,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZS8BG3AB6Y;
 				INFOPLIST_FILE = freeNowiOSCodeChallengeTests/Info.plist;
@@ -692,6 +772,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newlandapps.freeNowiOSCodeChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "freeNowiOSCodeChallengeTests/freeNowiOSCodeChallengeTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/freeNowiOSCodeChallenge.app/freeNowiOSCodeChallenge";
@@ -704,6 +786,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = ZS8BG3AB6Y;
 				INFOPLIST_FILE = freeNowiOSCodeChallengeTests/Info.plist;
@@ -715,6 +798,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.newlandapps.freeNowiOSCodeChallengeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "freeNowiOSCodeChallengeTests/freeNowiOSCodeChallengeTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/freeNowiOSCodeChallenge.app/freeNowiOSCodeChallenge";
