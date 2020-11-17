@@ -21,10 +21,9 @@ class MapViewController: UIViewController,GMSMapViewDelegate,MapViewModelDelegat
         let bound = GMSCoordinateBounds(coordinate: CLLocationCoordinate2D(latitude: viewModel.p1.latitude ?? 0 , longitude: viewModel.p1.longitude ?? 0), coordinate: CLLocationCoordinate2D(latitude: viewModel.p2.latitude ?? 0, longitude: viewModel.p2.longitude ?? 0))
         map.animate(with: GMSCameraUpdate.fit(bound, withPadding: 0.0))
         viewModel.loadVehicles(p1Lat: viewModel.p1.latitude ?? 0, p1Lon: viewModel.p1.longitude ?? 0, p2Lat: viewModel.p2.latitude ?? 0, p2Lon: viewModel.p2.longitude ?? 0)
-        //map.animate(to: GMSCameraPosition(latitude: viewModel.position.latitude, longitude: viewModel.position.longitude, zoom: 14))
-        //map.animate(toLocation: viewModel.position)
         self.bindToViewModel()
-        //Cluster icon generator
+        
+        //Cluster icon generator Not used. need to determine how to change the maps bound and request for new data.
         let iconGenerator = GMUDefaultClusterIconGenerator()
         let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
         let renderer = GMUDefaultClusterRenderer(mapView: self.map,clusterIconGenerator: iconGenerator)
@@ -80,6 +79,7 @@ class MapViewController: UIViewController,GMSMapViewDelegate,MapViewModelDelegat
     func viewModelDidUpdate(){
         print("data updated")
         map.clear()
+        clusterManager.clearItems()
         for mar in viewModel.markerViewModels{
             let marker = GMSMarker()
             marker.position = mar.location
@@ -92,8 +92,8 @@ class MapViewController: UIViewController,GMSMapViewDelegate,MapViewModelDelegat
             imageV.cornerRadius = 30/2
             imageV.image = #imageLiteral(resourceName: "sedan")
             marker.iconView = imageV
-            marker.map = map
-            //generateClusterItems(postion: mar.location, name: "", marker: marker)
+            //marker.map = map
+            generateClusterItems(postion: mar.location, name: "", marker: marker)
         }
     }
     

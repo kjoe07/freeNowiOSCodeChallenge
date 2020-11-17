@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ActivityIndicator",
+        "repositoryURL": "https://github.com/kjoe07/ActivityIndicator.git",
+        "state": {
+          "branch": "master",
+          "revision": "b0ffcefd9bb22fbd5eaf32bfdeae93684f71df7d",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
