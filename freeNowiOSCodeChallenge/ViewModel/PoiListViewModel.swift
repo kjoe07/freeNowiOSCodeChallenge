@@ -31,7 +31,7 @@ class PoiListViewModel{
     
     
     func loadData(){
-        isUpdating?(true)
+        self.isUpdating?(true)
         self.task =   service.getPoiList(lat0: 53.694865, Lon0: 9.757589, Lat1: 53.394655, Lon1: 10.099891, completion: {[weak self] result in
             guard let self = self else {return}
             switch result{

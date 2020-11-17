@@ -13,4 +13,10 @@ class DIContaier {
         let vm = PoiListViewModel(service: service)
         return vm
     }
+    static func createMapViewModel()-> MapViewModel{
+        let loader = CustomNetWorkLoader(session: URLSession.shared)
+        let service = RemotePoiListService(loader: loader)
+        let vm = MapViewModel(service: service)
+        return vm
+    }
 }

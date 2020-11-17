@@ -3,15 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0799A6E222A31D61F370EA9A /* Pods_freeNowiOSCodeChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF42B426CA7588BFE842AB8E /* Pods_freeNowiOSCodeChallenge.framework */; };
+		113C1BD2256425FC0063017F /* ActivityIndicator in Frameworks */ = {isa = PBXBuildFile; productRef = 113C1BD1256425FC0063017F /* ActivityIndicator */; };
+		113C1BD725642A480063017F /* MarkerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C1BD625642A480063017F /* MarkerViewModel.swift */; };
+		113C1BDC256437170063017F /* MapViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C1BDB256437170063017F /* MapViewModelTest.swift */; };
+		113C1BF025646E470063017F /* MarkerLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C1BEF25646E470063017F /* MarkerLabel.swift */; };
+		113C1BF525646F700063017F /* PoiItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 113C1BF425646F700063017F /* PoiItem.swift */; };
 		119C88A32562E2940088334B /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88A22562E2940088334B /* DIContainer.swift */; };
 		119C88A8256312990088334B /* PoilistViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88A7256312990088334B /* PoilistViewModelTest.swift */; };
 		119C88B125631AD00088334B /* DoubleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88B025631AD00088334B /* DoubleExtensions.swift */; };
 		119C88B625631FE20088334B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88B525631FE20088334B /* UITableViewExtension.swift */; };
+		119C88BB256325570088334B /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 119C88BA256325570088334B /* MapViewModel.swift */; };
 		11F74990255EBDFC00E4CDE5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F7498F255EBDFC00E4CDE5 /* AppDelegate.swift */; };
 		11F74992255EBDFC00E4CDE5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F74991255EBDFC00E4CDE5 /* SceneDelegate.swift */; };
 		11F74997255EBDFC00E4CDE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 11F74995255EBDFC00E4CDE5 /* Main.storyboard */; };
@@ -60,10 +66,15 @@
 
 /* Begin PBXFileReference section */
 		0810B9F902D94123C7B4FBA5 /* Pods_freeNowiOSCodeChallenge_freeNowiOSCodeChallengeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_freeNowiOSCodeChallenge_freeNowiOSCodeChallengeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		113C1BD625642A480063017F /* MarkerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerViewModel.swift; sourceTree = "<group>"; };
+		113C1BDB256437170063017F /* MapViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModelTest.swift; sourceTree = "<group>"; };
+		113C1BEF25646E470063017F /* MarkerLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerLabel.swift; sourceTree = "<group>"; };
+		113C1BF425646F700063017F /* PoiItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoiItem.swift; sourceTree = "<group>"; };
 		119C88A22562E2940088334B /* DIContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
 		119C88A7256312990088334B /* PoilistViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoilistViewModelTest.swift; sourceTree = "<group>"; };
 		119C88B025631AD00088334B /* DoubleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoubleExtensions.swift; sourceTree = "<group>"; };
 		119C88B525631FE20088334B /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
+		119C88BA256325570088334B /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		11F7498C255EBDFC00E4CDE5 /* freeNowiOSCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = freeNowiOSCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		11F7498F255EBDFC00E4CDE5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		11F74991255EBDFC00E4CDE5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +123,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0799A6E222A31D61F370EA9A /* Pods_freeNowiOSCodeChallenge.framework in Frameworks */,
+				113C1BD2256425FC0063017F /* ActivityIndicator in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +206,7 @@
 				11F74B202562D88300E4CDE5 /* TestPoiListservice.swift */,
 				11F74B252562D8A200E4CDE5 /* MockPolistService.swift */,
 				119C88A7256312990088334B /* PoilistViewModelTest.swift */,
+				113C1BDB256437170063017F /* MapViewModelTest.swift */,
 			);
 			path = freeNowiOSCodeChallengeTests;
 			sourceTree = "<group>";
@@ -213,6 +226,7 @@
 				11F749C6255EC2F100E4CDE5 /* Cordinate.swift */,
 				11F749CE255EC34200E4CDE5 /* PoiList.swift */,
 				11F749D3255EC37700E4CDE5 /* PoiListResponse.swift */,
+				113C1BF425646F700063017F /* PoiItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -227,6 +241,7 @@
 				11F74A02255EE22C00E4CDE5 /* RoundedButton.swift */,
 				11F74A07255EE38100E4CDE5 /* CarImageView.swift */,
 				11F74A12255F09C100E4CDE5 /* PoiListViewController.swift */,
+				113C1BEF25646E470063017F /* MarkerLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +251,8 @@
 			children = (
 				11F74AF925620BF300E4CDE5 /* PoiListViewModel.swift */,
 				11F74B0125620F8500E4CDE5 /* PoiTableViewCellViewModel.swift */,
+				119C88BA256325570088334B /* MapViewModel.swift */,
+				113C1BD625642A480063017F /* MarkerViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -291,6 +308,9 @@
 			dependencies = (
 			);
 			name = freeNowiOSCodeChallenge;
+			packageProductDependencies = (
+				113C1BD1256425FC0063017F /* ActivityIndicator */,
+			);
 			productName = freeNowiOSCodeChallenge;
 			productReference = 11F7498C255EBDFC00E4CDE5 /* freeNowiOSCodeChallenge.app */;
 			productType = "com.apple.product-type.application";
@@ -366,6 +386,9 @@
 				Base,
 			);
 			mainGroup = 11F74983255EBDFC00E4CDE5;
+			packageReferences = (
+				113C1BD0256425FC0063017F /* XCRemoteSwiftPackageReference "ActivityIndicator" */,
+			);
 			productRefGroup = 11F7498D255EBDFC00E4CDE5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -518,19 +541,23 @@
 				11F74B0225620F8500E4CDE5 /* PoiTableViewCellViewModel.swift in Sources */,
 				11F74990255EBDFC00E4CDE5 /* AppDelegate.swift in Sources */,
 				11F74A08255EE38100E4CDE5 /* CarImageView.swift in Sources */,
+				113C1BF025646E470063017F /* MarkerLabel.swift in Sources */,
 				11F74B1C2562BF2800E4CDE5 /* Endpoint.swift in Sources */,
 				11F74992255EBDFC00E4CDE5 /* SceneDelegate.swift in Sources */,
 				11F74AFA25620BF400E4CDE5 /* PoiListViewModel.swift in Sources */,
 				11F74A03255EE22C00E4CDE5 /* RoundedButton.swift in Sources */,
+				113C1BF525646F700063017F /* PoiItem.swift in Sources */,
 				11F74B152562BD0500E4CDE5 /* NetWorkLoader.swift in Sources */,
 				11F749FE255EE15A00E4CDE5 /* PoiTableViewCell.swift in Sources */,
 				11F749C7255EC2F100E4CDE5 /* Cordinate.swift in Sources */,
+				119C88BB256325570088334B /* MapViewModel.swift in Sources */,
 				11F74B0D2562BBAD00E4CDE5 /* PoiListService.swift in Sources */,
 				119C88B125631AD00088334B /* DoubleExtensions.swift in Sources */,
 				119C88A32562E2940088334B /* DIContainer.swift in Sources */,
 				11F74A13255F09C100E4CDE5 /* PoiListViewController.swift in Sources */,
 				119C88B625631FE20088334B /* UITableViewExtension.swift in Sources */,
 				11F749D4255EC37700E4CDE5 /* PoiListResponse.swift in Sources */,
+				113C1BD725642A480063017F /* MarkerViewModel.swift in Sources */,
 				11F749E7255EDAE400E4CDE5 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -540,6 +567,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				11F74B262562D8A200E4CDE5 /* MockPolistService.swift in Sources */,
+				113C1BDC256437170063017F /* MapViewModelTest.swift in Sources */,
 				11F74A19255F09FC00E4CDE5 /* PoiListViewControllerTest.swift in Sources */,
 				11F74B212562D88300E4CDE5 /* TestPoiListservice.swift in Sources */,
 				11F74A2725601BCB00E4CDE5 /* testHelper.swift in Sources */,
@@ -887,6 +915,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		113C1BD0256425FC0063017F /* XCRemoteSwiftPackageReference "ActivityIndicator" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kjoe07/ActivityIndicator.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		113C1BD1256425FC0063017F /* ActivityIndicator */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 113C1BD0256425FC0063017F /* XCRemoteSwiftPackageReference "ActivityIndicator" */;
+			productName = ActivityIndicator;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 11F74984255EBDFC00E4CDE5 /* Project object */;
 }

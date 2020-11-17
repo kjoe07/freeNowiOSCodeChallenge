@@ -16,10 +16,8 @@ class PoiListViewController: UIViewController {
     var viewModel: PoiListViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
-        setActivityIndicator()
-        viewModel.loadData()
         bindToViewModel()
-        
+        viewModel.loadData()
     }
     
     private func bindToViewModel() {
@@ -34,33 +32,22 @@ class PoiListViewController: UIViewController {
         }
     }
 
-    /*
+    
     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
-    
-    func setActivityIndicator(){
-        activity.isHidden = true
-        activity.hidesWhenStopped = true
-        activity.color = .green
-        activity.center = self.view.center
-        self.view.addSubview(activity)
-        activity.startAnimating()
+        let vc = segue.destination as! MapViewController
+        vc.viewModel = DIContaier.createMapViewModel()
+        vc.viewModel.setInitialpoints(p1: Coordinate(latitude: 53.694865, longitude: 9.757589) , p2: Coordinate(latitude: 53.394655, longitude: 10.099891))
+        vc.viewModel.list = viewModel.list
     }
     
     func updateActivity(flag: Bool){
         DispatchQueue.main.async {
             if flag{
-                self.activity.isHidden = false
-                self.activity.startAnimating()
+                self.showActivityIndicator(color: UIColor(named: "Green") ?? .green)
             }else{
-                self.activity.stopAnimating()
+                self.hideActivityIndicator()
             }
         }
     }
@@ -69,8 +56,8 @@ class PoiListViewController: UIViewController {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-        
     }
+    
     func viewModelDidError(error: Error){
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)

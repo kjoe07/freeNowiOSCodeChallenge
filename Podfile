@@ -7,6 +7,7 @@ target 'freeNowiOSCodeChallenge' do
 
   # Pods for freeNowiOSCodeChallenge
   pod 'GoogleMaps', '4.0.0'
+  pod 'Google-Maps-iOS-Utils'
   
   target 'freeNowiOSCodeChallengeTests' do
     inherit! :search_paths

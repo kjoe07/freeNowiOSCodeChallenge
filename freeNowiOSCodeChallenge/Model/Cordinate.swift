@@ -20,5 +20,9 @@ struct Coordinate : Decodable {
         latitude = try values.decodeIfPresent(Double.self, forKey: .latitude)
         longitude = try values.decodeIfPresent(Double.self, forKey: .longitude)
     }
+    init(latitude: Double,longitude: Double) {
+        self.latitude = latitude
+        self.longitude = longitude
+    }
 
 }
