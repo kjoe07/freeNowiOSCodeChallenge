@@ -20,7 +20,9 @@ class PoilistViewModelTest: XCTestCase {
         sut = nil
     }
 
-    
-    
+    func test_taskIsNotNilWhenLoadData(){
+        sut.loadData()
+        XCTAssertNotNil(sut.task)
+    }
 
 }

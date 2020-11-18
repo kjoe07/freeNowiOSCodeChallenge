@@ -13,13 +13,11 @@ class PoiListViewControllerTest: XCTestCase {
     var service: MockPolistService!
     
     override func setUpWithError() throws {
-        let nc = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController() as! UINavigationController
-        let sut = nc.viewControllers.first as! PoiListViewController
-        //sut = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: String(describing: PoiListViewController.self))
-        sut.loadViewIfNeeded()
+        sut = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: String(describing: PoiListViewController.self))
         let service = MockPolistService()
         vm = PoiListViewModel(service: service)
         sut.viewModel = vm
+        sut.loadViewIfNeeded()
     }
 
     override func tearDownWithError() throws {
@@ -35,7 +33,24 @@ class PoiListViewControllerTest: XCTestCase {
         XCTAssertNotNil(sut.tableView.dataSource)
         XCTAssertNotNil(sut.tableView.delegate)
     }
+    func test_ConformsToUITableViewDataSourceAndUITableViewDelegate(){
+        XCTAssertTrue(sut.tableView.dataSource is PoiListViewController)
+        XCTAssertTrue(sut.tableView.delegate is PoiListViewController)
+        XCTAssertTrue(sut.conforms(to: UITableViewDataSource.self))
+        XCTAssertTrue(sut.conforms(to: UITableViewDelegate.self))
+        XCTAssertTrue(sut.responds(to: #selector(sut.tableView(_:numberOfRowsInSection:))))
+        XCTAssertTrue(sut.responds(to: #selector(sut.tableView(_:cellForRowAt:))))
+    }
     
+    func test_TableViewCellHasReuseIdentifier() {
+        let poi = createSinglePoi()
+        sut.viewModel.poiCellViewModel = [PoiTableViewCellViewModel(poi: poi)]
+        let cell = sut.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as? PoiTableViewCell
+        let actualReuseIdentifer = cell?.reuseIdentifier
+        let expectedReuseIdentifier = "cell"
+        XCTAssertEqual(actualReuseIdentifer, expectedReuseIdentifier)
+    }
+
     func test_TappingMapButtonPushMapViwController(){
         //Arrange
         let navigation = UINavigationController(rootViewController: sut)
@@ -55,20 +70,29 @@ class PoiListViewControllerTest: XCTestCase {
         //Assert
         XCTAssertEqual(last.title, "Map")
     }
-
-//    func test_TavleViewCellOutletsNotNill(){
-//        let cell = sut.tableView.dataSource?.tableView(sut.tableView, cellForRowAt: IndexPath(row: 0, section: 0)) as! PoiTableViewCell
-//        XCTAssertNotNil(cell.heading)
-//        XCTAssertNotNil(cell.location)
-//        XCTAssertNotNil(cell.status)
-//        XCTAssertNotNil(cell.vehicleImage)
-//        XCTAssertNotNil(cell.vehicleType)
-//    }
     
     func test_ViewModelIsNotNill(){        
         sut.viewModel = DIContaier.createViewModel()
         sut.loadViewIfNeeded()
         XCTAssertNotNil(sut.viewModel)
+    }
+    
+    func createSinglePoi() -> Poi{
+        let data = """
+                {
+                "id": -479925044,
+                "coordinate": {
+                    "latitude": 53.5530854,
+                    "longitude": 9.955689
+                },
+                "state": "INACTIVE",
+                "type": "TAXI",
+                "heading": 0.0
+                }
+            """.data(using: .utf8)
+        //guard let data = dataString else {return }
+        let poi = try! JSONDecoder().decode(Poi.self, from: data!)
+        return poi
     }
    
 }

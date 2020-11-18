@@ -11,8 +11,6 @@ protocol Endpoint {
     var queryItems: [URLQueryItem]? { get set}
 }
 extension Endpoint {
-    // We still have to keep 'url' as an optional, since we're
-    // dealing with dynamic components that could be invalid.
     var url: URL? {
         var components = URLComponents()
         components.scheme = "https"

@@ -9,12 +9,12 @@ import UIKit
 import GoogleMaps
 import GoogleMapsUtils
 import ActivityIndicator
-class MapViewController: UIViewController,GMSMapViewDelegate,MapViewModelDelegate,GMUClusterRendererDelegate {
+class MapViewController: UIViewController,GMSMapViewDelegate,GMUClusterManagerDelegate,GMUClusterRendererDelegate {
    
     @IBOutlet weak var map: GMSMapView!
     var viewModel:  MapViewModel!
     var clusterManager: GMUClusterManager!
-    
+    var renderer: GMUDefaultClusterRenderer!
     override func viewDidLoad() {
         super.viewDidLoad()
         map.delegate = self
@@ -22,13 +22,11 @@ class MapViewController: UIViewController,GMSMapViewDelegate,MapViewModelDelegat
         map.animate(with: GMSCameraUpdate.fit(bound, withPadding: 0.0))
         viewModel.loadVehicles(p1Lat: viewModel.p1.latitude ?? 0, p1Lon: viewModel.p1.longitude ?? 0, p2Lat: viewModel.p2.latitude ?? 0, p2Lon: viewModel.p2.longitude ?? 0)
         self.bindToViewModel()
-        
-        //Cluster icon generator Not used. need to determine how to change the maps bound and request for new data.
-        let iconGenerator = GMUDefaultClusterIconGenerator()
-        let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
-        let renderer = GMUDefaultClusterRenderer(mapView: self.map,clusterIconGenerator: iconGenerator)
+       
+        renderer = GMUDefaultClusterRenderer(mapView: self.map,clusterIconGenerator: viewModel.iconGenerator)
         renderer.delegate = self //as? GMUClusterRendererDelegate
-        self.clusterManager = GMUClusterManager(map: self.map ?? GMSMapView(), algorithm: algorithm,renderer: renderer)
+        self.clusterManager = GMUClusterManager(map: self.map, algorithm: viewModel.algorithm,renderer: renderer)
+        self.title = viewModel.title
     }
     
     func bindToViewModel(){
@@ -48,15 +46,6 @@ class MapViewController: UIViewController,GMSMapViewDelegate,MapViewModelDelegat
             }            
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
     func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
         let bound = mapView.projection.visibleRegion()
@@ -64,6 +53,7 @@ class MapViewController: UIViewController,GMSMapViewDelegate,MapViewModelDelegat
     }
     
     func viewModelDidError(error: Error){
+        self.hideActivityIndicator()
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(action)
@@ -83,25 +73,19 @@ class MapViewController: UIViewController,GMSMapViewDelegate,MapViewModelDelegat
         for mar in viewModel.markerViewModels{
             let marker = GMSMarker()
             marker.position = mar.location
-            //marker.icon = #imageLiteral(resourceName: "AVATARCOCHE")
             marker.title = mar.title
- 
-          //  marker.map = map
             let imageV = CarImageView(frame: CGRect(x: 10, y: 0, width: 30, height: 30))
             imageV.borderColor =  UIColor(named: mar.state) ?? . green
             imageV.cornerRadius = 30/2
             imageV.image = #imageLiteral(resourceName: "sedan")
             marker.iconView = imageV
             //marker.map = map
-            generateClusterItems(postion: mar.location, name: "", marker: marker)
+            let item = viewModel.generateClusterItems(postion: mar.location, name: "", marker: marker)
+            clusterManager.add(item)
         }
     }
     
-    //Cluster functions nor Used need a way to determine when to update or not the request.
-    func generateClusterItems(postion: CLLocationCoordinate2D ,name: String, marker: GMSMarker) {
-        let item = POIItem(position: postion, name: name,marker: marker)
-        clusterManager.add(item)
-    }
+    //MARK: - Clustermanager Functions
     func clusterManager(_ clusterManager: GMUClusterManager, didTap cluster: GMUCluster) -> Bool {
         let newCamera = GMSCameraPosition.camera(withTarget: cluster.position,zoom: map.camera.zoom + 1)
         let update = GMSCameraUpdate.setCamera(newCamera)

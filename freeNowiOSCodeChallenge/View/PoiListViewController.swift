@@ -6,29 +6,36 @@
 //
 
 import UIKit
-
+import Network
 class PoiListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mapButton: UIBarButtonItem!
     
     var activity = UIActivityIndicatorView(style: .large)
-    
+    let monitor = NWPathMonitor()
     var viewModel: PoiListViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel = DIContaier.createViewModel()
         bindToViewModel()
         viewModel.loadData()
     }
     
     private func bindToViewModel() {
         self.viewModel.didUpdate = { [weak self] in
-            self?.updateTableView()
+            DispatchQueue.main.async {
+                self?.updateTableView()
+            }
         }
         self.viewModel.didError = { [weak self] error in
-            self?.viewModelDidError(error: error)
+            DispatchQueue.main.async {
+                self?.viewModelDidError(error: error)
+            }
         }
         self.viewModel.isUpdating = { [weak self] flag in
-            self?.updateActivity(flag: flag)
+            DispatchQueue.main.async {
+                self?.updateActivity(flag: flag)
+            }            
         }
     }
 
@@ -60,6 +67,26 @@ class PoiListViewController: UIViewController {
     
     func viewModelDidError(error: Error){
         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
+    }
+    func NetworkMonitor(){
+        monitor.pathUpdateHandler = { path in
+            if path.status != .satisfied {
+                print("No connection.")
+                 DispatchQueue.main.async {
+                     self.viewModel.task?.cancel()
+                     self.NoInternetAlert()
+                 }
+            }
+            print(path.isExpensive)
+        }
+        let queue = DispatchQueue.global(qos: .background)
+        monitor.start(queue: queue)
+    }
+    func NoInternetAlert(){
+        let alert = UIAlertController(title: "Offline", message: "there is not internet conection detected.", preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
         alert.addAction(action)
         self.present(alert, animated: true, completion: nil)

@@ -7,20 +7,12 @@
 
 import Foundation
 import GoogleMaps
-protocol MapViewModelDelegate {
-    
-}
+import GoogleMapsUtils
 class MapViewModel{
     var service: PoilistService
     var p1: Coordinate!
     var p2:Coordinate!
-    var list: [Poi]!{
-        didSet{
-            self.markerViewModels = self.list.map({
-                self.viewModelFor(poi: $0)
-            })
-        }
-    }
+    var list: [Poi]!
     var task: NetworkCancelable?
     var isActivityIndicatorShowing = false
     
@@ -29,11 +21,12 @@ class MapViewModel{
     var didError: ((Error) -> Void )?
     var markerViewModels = [MarkerViewModel](){
         didSet{
-            print("set markersVM",markerViewModels.count)
             self.didUpdate?()
-           // print("did update is ",self.didUpdate?() as Any)
         }
     }
+    var title = "Map"
+    let iconGenerator = GMUDefaultClusterIconGenerator()
+    let algorithm = GMUNonHierarchicalDistanceBasedAlgorithm()
     
     init(service: PoilistService) {
         self.service = service
@@ -56,6 +49,9 @@ class MapViewModel{
             switch result{
             case .success(let d):
                 self.list = d.poiList ?? []
+                self.markerViewModels = self.list.map({
+                    self.viewModelFor(poi: $0)
+                })
             case .failure(let e):
                 self.didError?(e)
             }
@@ -64,6 +60,10 @@ class MapViewModel{
     private func viewModelFor(poi: Poi) -> MarkerViewModel {
         let viewModel = MarkerViewModel(poi: poi)
         return viewModel
+    }
+    func generateClusterItems(postion: CLLocationCoordinate2D ,name: String, marker: GMSMarker) -> POIItem {
+        let item = POIItem(position: postion, name: name,marker: marker)
+        return item
     }
     
 }

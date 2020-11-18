@@ -61,5 +61,6 @@ class MapViewModelTest: XCTestCase {
         XCTAssertNotNil(sut.markerViewModels)
         XCTAssertEqual(sut.list.count, sut.markerViewModels.count)
     }
+    
 
 }
